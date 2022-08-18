@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obligatorio</title>
+    <link rel="stylesheet" href="obligatorio.css">
+</head>
+
+<body>
+
+    <div id="contenedor">
+        <div id="cabezal" class="clearfix">
+            <img id="logo" src="imagenes/ezgif.com-add-text.jpg" alt="logo">
+            <!--cambiar la imagen del logo-->
+            <ul id="navPrincipal">
+                <li id="btnSeccionVerRecetas" class="btn admin colaborador user">
+                    <a>Ver recetas</a>
+                </li>
+                <li id="btnSeccionPublicarReceta" class="btn admin colaborador">
+                    <a>Publicar receta</a>
+                </li>
+                <li id="btnSeccionGestionarColaboradres" class="btn admin">
+                    <a>Gestionar colaboradores</a>
+                </li>
+                <li id="btnSeccionReportes" class="btn admin">
+                    <a>Reportes</a>
+                </li>
+            </ul>
+            <div id="aux">
+                <a id="btnSeccionIniciarSesion" class="btn admin colaborador user">Inicio de sesión</a>
+                <a id="btnSeccionCerrarSesion" class="btn admin colaborador">Cerrar sesión</a>
+                <p><strong id="nombreUsuarioIngresado"></strong></p>
+            </div><!-- FIN AUX -->
+        </div><!-- FIN CABEZAL -->
+
+        <div id="contenido">
+            <div id="seccionPublicarReceta" class="seccion">
+                <h3>Publicar receta</h3>
+                <label for="txtTitulo">Título de la receta:</label>
+                <input type="text" id="txtTitulo">
+                <br>
+                <label for="fileFotoReceta">Foto de la receta:</label>
+                <input type="file" id="fileFotoReceta">
+                <br>
+                <label for="txtTiempoPreparacionReceta">Tiempo de preparacion (en minutos):</label>
+                <input type="text" id="txtTiempoPreparacionReceta">
+                <br>
+                <label for="txtElaboracionReceta">Elaboracion de la receta:</label>
+                <br>
+                <textarea id="txtElaboracionReceta" maxlength="150"></textarea>
+                <br>
+                <input type="button" value="Publicar receta" id="btnAgregarReceta">
+            </div>
+
+            <div id="seccionGestionarColaboradres" class="seccion">
+                <h3>Gestionar colaboradores</h3>
+                <label for="txtNombreColaborador">Ingrese el nombre del colaborador</label>
+                <input type="text" id="txtNombreColaborador">
+                <br>
+                <label for="txtApellidoColaborador">Ingrese el apellido del colaborador</label>
+                <input type="text" id="txtApellidoColaborador">
+                <br>
+                <input type="button" value="Agregar colaborador" id="btnAgregarColaborador">
+                <br>
+                <h3>Lista de colaboradores</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Usuario</th>
+                            <th>Cantidad Recetas</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblColaboradores">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="seccionIniciarSesion" class="seccion">
+                <h3>Inicio de sesion</h3>
+                <label for="txtNombreUsuario">Ingrese nombre de usuario</label>
+                <input type="text" id="txtNombreUsuario">
+                <br>
+                <label for="txtContraseña">Ingrese su contraseña</label>
+                <input type="password" id="txtContraseña">
+                <br>
+                <input type="button" value="Ingresar" id="btnIngresar">
+            </div>
+
+            <br>
+
+            <div id="seccionVerRecetas" class="seccion">
+            </div>
+        </div><!-- FIN CONTENIDO -->
+        <div id="pie">
+        </div><!-- FIN PIE -->
+    </div><!-- FIN CONTENEDOR -->
+
+
+    <script src="jquery-3.5.0.min.js"></script>
+    <script src="clases.js"></script>
+    <script src="libreria.js"></script>
+    <script src="obligatorio.js"></script>
+</body>
+
+</html>
+
+
+<!--Falta agregar seccion reportes-->
